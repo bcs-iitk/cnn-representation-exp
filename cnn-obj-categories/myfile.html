@@ -56,58 +56,66 @@
 		<div class = "col-md-4" style="background-color:burlywood;">
 			<h3 style="text-align: center;">Slide the bar to choose the amount of similarity</h3>
 			<center>
+				<b>
 				Scale: <br>
-				0(Very Dissimilar)----------5(Neutral) ---------- 10(Very Similar)		      
+				-5(Very Dissimilar)----------0(Neutral) ---------- 5(Very Similar)		 
+				</b>
 			</center>
 			<br>
 			<table>
 			  <form id = 'foo'>
 				<tr>
 				  <th>Body shape</th>
-				  <td><input type="range" id="1" name="body_shape" min ="0" max = "10" value="5"></td>         
+				  <td><input type="range" id="1" name="body_shape" min ="-5" max = "5" value="0"></td>         
 				  <td style="width: 50px" id = "rangetext1">Slide</td>  
 				  <th><input type="checkbox" name="body_shape_judge" id="checkbox1" value="cant">Can't Judge
 				</tr>
 				<tr>
 				  <th>Skin texture</th>
-				  <td><input type="range" id="2" name="skin_texture" min ="0" max = "10" value="5"></td>
+				  <td><input type="range" id="2" name="skin_texture" min ="-5" max = "5" value="0"></td>
 				  <td id = "rangetext2">Slide</td>
 				  <th><input type="checkbox" name="skin_texture_judge" id="checkbox2" value="cant">Can't Judge
 				</tr>
 				<tr>
 				  <th>Skin color</th>
-				  <td><input type="range" id="3" name="skin_color" min ="0" max = "10" value="5"></td> 
+				  <td><input type="range" id="3" name="skin_color" min ="-5" max = "5" value="0"></td> 
 				  <td id = "rangetext3">Slide</td>
 				  <th><input type="checkbox" name="skin_color_judge" id="checkbox3" value="cant">Can't Judge
 				</tr>
 				<tr>
-				  <th>Facial features</th>
-				  <td><input type="range" id="4" name="facial_features" min ="0" max = "10" value="5"></td> 
+				  <th>Face shape</th>
+				  <td><input type="range" id="4" name="face_shape" min ="-5" max = "5" value="0"></td> 
 				  <td id = "rangetext4">Slide</td>
-				  <th><input type="checkbox" name="facial_features_judge" id="checkbox4" value="cant">Can't Judge
-				</tr>
-				<tr>
-				  <th>Limbs</th>
-				  <td><input type="range" id="5" name="limbs" min ="0" max = "10" value="5"></td> 
-				  <td id = "rangetext5">Slide</td>
-				  <th><input type="checkbox" name="limbs_judge" id="checkbox5" value="cant">Can't Judge
-				</tr>
-				<tr>
-				  <th>Horns</th>
-				  <td><input type="range" id="6" name="horns" min ="0" max = "10" value="5"></td> 
-				  <td id = "rangetext6">Slide</td>
-				  <th><input type="checkbox" name="horns_judge" id="checkbox6" value="cant">Can't Judge
+				  <th><input type="checkbox" name="face_shape_judge" id="checkbox4" value="cant">Can't Judge
 				</tr>
 				<tr>
 				  <th>Mouth</th>
-				  <td><input type="range" id="7" name="mouth" min ="0" max = "10" value="5"></td> 
+				  <td><input type="range" id="5" name="mouth" min ="-5" max = "5" value="0"></td> 
+				  <td id = "rangetext5">Slide</td>
+				  <th><input type="checkbox" name="mouth_judge" id="checkbox5" value="cant">Can't Judge
+				</tr>
+				<tr>
+				  <th>Nose</th>
+				  <td><input type="range" id="6" name="nose" min ="-5" max = "5" value="0"></td> 
+				  <td id = "rangetext6">Slide</td>
+				  <th><input type="checkbox" name="nose_judge" id="checkbox6" value="cant">Can't Judge
+				</tr>
+				<tr>
+				  <th>Ears</th>
+				  <td><input type="range" id="7" name="ears" min ="-5" max = "5" value="0"></td> 
 				  <td id = "rangetext7">Slide</td>
-				  <th><input type="checkbox" name="mouth_judge" id="checkbox7" value="cant">Can't Judge
-				</tr> 
+				  <th><input type="checkbox" name="ears_judge" id="checkbox7" value="cant">Can't Judge
+				</tr>
+				<tr>
+				  <th>Horns</th>
+				  <td><input type="range" id="8" name="horns" min ="-5" max = "5" value="0"></td> 
+				  <td id = "rangetext8">Slide</td>
+				  <th><input type="checkbox" name="horns_judge" id="checkbox8" value="cant">Can't Judge
+				</tr>
 				<tr>
 				  <th>Overall Similarity</th>
-				  <td><input type="range" id="8" name="overall" min ="0" max = "10" value = "5"></td>
-				  <td id = "rangetext8">Slide</td>
+				  <td><input type="range" id="9" name="overall" min ="-5" max = "5" value = "0"></td>
+				  <td id = "rangetext9">Slide</td>
 				  <th></th>
 				</tr>
 				</table>
@@ -134,6 +142,7 @@
 		$('#6').tooltip({title: function(){return $(this).val();}, placement: "right", trigger: "manual"});
 		$('#7').tooltip({title: function(){return $(this).val();}, placement: "right", trigger: "manual"});
 		$('#8').tooltip({title: function(){return $(this).val();}, placement: "right", trigger: "manual"});
+		$('#9').tooltip({title: function(){return $(this).val();}, placement: "right", trigger: "manual"});
 	});
   </script>
   <script src="main.js"></script>
