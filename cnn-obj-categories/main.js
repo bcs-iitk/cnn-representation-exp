@@ -6,7 +6,11 @@ $(document).ready(function(){
 var i;
 var j;
 i = Math.floor(Math.random()*120)
-j = Math.floor(Math.random()*120);
+j = Math.floor(Math.random()*120
+while(i==j){
+    i = Math.floor(Math.random()*120)
+    j = Math.floor(Math.random()*120);
+}
 $(".image1").attr("src", 'animals/stim'+i+'.png');
 $(".image2").attr("src", 'animals/stim'+j+'.png');
 
@@ -116,8 +120,8 @@ $("#foo").submit(function(event){
     i = Math.floor(Math.random()*120)
     j = Math.floor(Math.random()*120);
     while(i==j){
-    i = Math.floor(Math.random()*120)
-    j = Math.floor(Math.random()*120);
+		i = Math.floor(Math.random()*120)
+		j = Math.floor(Math.random()*120);
     }
     uncheck();
     $(".image1").attr("src","");
