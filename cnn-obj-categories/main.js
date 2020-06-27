@@ -6,7 +6,7 @@ $(document).ready(function(){
 var i;
 var j;
 i = Math.floor(Math.random()*120)
-j = Math.floor(Math.random()*120
+j = Math.floor(Math.random()*120)
 while(i==j){
     i = Math.floor(Math.random()*120)
     j = Math.floor(Math.random()*120);
