@@ -1,7 +1,7 @@
 var random_id;
 $(document).ready(function(){
 	random_id = Math.floor(100000000 + Math.random()*900000000);
-})
+});
 
 function check(array, ind){
 	for(k = 0; k < array.length; k++){
@@ -11,6 +11,7 @@ function check(array, ind){
 	}
 	return false;
 }
+
 var index = []; var i; var j;
 i = Math.floor(Math.random()*120)
 j = Math.floor(Math.random()*120)
@@ -40,7 +41,9 @@ function uncheck(){
 	$('#'+k).prop("value","0");
 	$('#'+k).tooltip('hide');
 	$('#rangetext'+k).text("Slide");
-}
+};
+
+
 $('#1').on('input change' ,function (){
 	$(this).tooltip('show');
 	$('#rangetext1').text("");
@@ -85,6 +88,7 @@ $('#9').on('input change' ,function (){
 	$(this).tooltip('show');
 	$('#rangetext9').text("");
 });
+
 $('#checkbox1').change(function (){
 	$('#1').prop("value", "0");
 	$('#rangetext1').text("Slide");
@@ -125,6 +129,7 @@ $('#checkbox8').change(function (){
 	$('#rangetext8').text("Slide");
 	$('#8').tooltip('hide');
 });
+
 $("#foo").submit(function(event){
     var $form = $(this);
     submitform($form);
@@ -147,7 +152,13 @@ $("#foo").submit(function(event){
     $(".image2").attr("src","");
     $(".image1").attr("src", 'animals/stim'+i+'.png');
     $(".image2").attr("src", 'animals/stim'+j+'.png');
+	
+	if(index.length > 15){
+		$('#next2').prop('disabled', false)
+		$('#msg').text('You can now submit the experiment, however we urge you to do more trials if possible.')
+	}
 });
+
 var request;
 function submitform($form){
     // Abort any pending request
@@ -177,19 +188,23 @@ function submitform($form){
     // Note: we disable elements AFTER the form data has been serialized.
     // Disabled form elements will not be serialized.
     $inputs.prop("disabled", true);
+
     // Fire off the request to /form.php
     request = $.ajax({
         url: "https://script.google.com/macros/s/AKfycbzc4iXyaM74aK8-JvzhUQqe1n34VUVLstSpQVsONbCkuA-ec4U/exec",
         type: "post",
         data: serializedData
     });
+
     request.always(function () {
         // Reenable the inputs
         $inputs.prop("disabled", false);
     });
+
     // Prevent default posting of form
     event.preventDefault();
-}
+};
+
 $(".next2").click(function(){
     $("body").replaceWith("<p style  = 'text-align:center; font-size: 50px;'>Thank you for taking part in the experiment! <br> <br> Your experiment ID is "+random_id+".</p>");
 })

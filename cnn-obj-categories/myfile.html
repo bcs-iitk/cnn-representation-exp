@@ -17,6 +17,15 @@
 			color: black;
 			font-size: medium;
 		}
+		#msg{
+			text-align: center;
+			color: black;
+			font-size: large;
+			background-color: yellow;
+			font-weight: bolder;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 		.image1,.image2{
 			border-style: solid;
 			border-width: 2px;
@@ -38,16 +47,17 @@
 			background-color:lightgray;
 			color: black;
 		}
-		.next2:hover{
+		.next2:enabled:hover{
 			background-color:lightgray;
 			color: black;
 		}
 	</style>
 <body>
   <div class="container-fluid">
-    <div id="heading"><h1 align = "center">Select the similarity of the features between the given images</h1></div>
-	<br> 
-	
+    <div id="heading"><h1 align = "center">Select the similarity of the features between the given images</h1></div> 
+	<div id="msg">
+		You can submit the experiment after 15 trials, however we urge you to go beyond 15 and do as many as possible.
+	</div>
 	<br>
 	<div class = "row no-gutters">
 		<div class = "col-md-4">
@@ -122,7 +132,7 @@
 				<br>
 				<center>
 			  <button class = 'next' type = 'submit'>Next</button>
-			  <button class = 'next2'>Submit</button>
+			  <button class = 'next2' id = 'next2' disabled>Submit</button>
 			  </center>
 			</form>
 			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
