@@ -153,9 +153,15 @@ $("#foo").submit(function(event){
     $(".image1").attr("src", 'animals/stim'+i+'.png');
     $(".image2").attr("src", 'animals/stim'+j+'.png');
 	
-	if(index.length > 15){
+	if(index.length > 15 && index.length <= 30){
 		$('#next2').prop('disabled', false)
-		$('#msg').text('You can now submit the experiment, however we urge you to do more trials if possible.')
+		$('#msg').html('You can now submit the experiment, however we urge you to do more trials if possible. <br> How about we go to 50?')
+	}else if(index.length > 30 && index.length <= 50){
+		$('#next2').prop('disabled', false)
+		$('#msg').html('Good going! You have completed 30 trials. Just need 20 more to reach 50.')
+	}else if(index.length > 50){
+		$('#next2').prop('disabled', false)
+		$('#msg').html('Congratulations on completing 50 trials! We encourage you to keep going, your honest responses are most valuable to us.')
 	}
 });
 
