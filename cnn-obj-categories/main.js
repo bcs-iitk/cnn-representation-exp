@@ -212,5 +212,5 @@ function submitform($form){
 };
 
 $(".next2").click(function(){
-    $("body").replaceWith("<p style  = 'text-align:center; font-size: 50px;'>Thank you for taking part in the experiment! <br> <br> Your experiment ID is "+random_id+".</p>");
+    $("body").replaceWith("<p style  = 'text-align:center; font-size: 50px;'>Thank you for taking part in the experiment! <br> <br> Your experiment ID is "+random_id+".</p> <br> <br> <br> <p style  = 'text-align:center; font-size: 30px; font-weight: bold'>You may now close this window. </p>"");
 })
